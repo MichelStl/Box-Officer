@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Box-Officer - Index</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gestionnaire de films movieGEN">
+    <!--Page description-->
+    <meta name="keywords"
+        content="Film, Meilleurs Films, Gestionnaire de Films, Omdb, Youtube, eBay, movieGEN, moviegen">
+    <!--Page reference keywords-->
+    <meta name="author" content="Michel St-Laurent, Jean-Félix St-Hilaire">
+    <!--Page author name-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/stylesheet.css" rel="stylesheet" />
+    <link rel="icon" href="images/play.png">
+
+    <style>
+
+    </style>
+</head>
+
+<body onload='LoadBody()'>
+    <!--Don't forget to add your bootstrap library-->
+    <div class="container-fluid">
+        <!--HEADER-->
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top"></nav>
+        <!--END HEADER-->
+        <div id="content">
+            <div id="sort" class="row justify-content-md-center">
+                <div class="btn-group" role="group">
+                    <button id="btnReleaseDate" type="button" class="btn btn-outline-secondary"
+                        onclick="sortDate()">Release Date</button>
+                    <button id="btnPop" type="button" class="btn btn-outline-secondary active"
+                        onclick="sortPop()">Popularity</button>
+                </div>
+            </div>
+            <div id="title" class="row justify-content-md-center">
+            </div>
+            <div style="justify-content: center;display:flex;">
+                <nav>
+                    <ul id="pagination" class="pagination" style="margin-top:10px;">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+    <!--FOOTER-->
+    <footer id="footer"></footer>
+    <!--END FOOTER-->
+    <!--Stylesheet path and file-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d8e01e74af.js"></script>
+    <script type="text/javascript" src="js/moviegen.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Box-Officer - Detail</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gestionnaire de films movieGEN">
+    <!--Page description-->
+    <meta name="keywords"
+        content="Film, Meilleurs Films, Gestionnaire de Films, Omdb, Youtube, eBay, movieGEN, moviegen">
+    <!--Page reference keywords-->
+    <meta name="author" content="Michel St-Laurent, Jean-Félix St-Hilaire">
+    <!--Page author name-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/stylesheet.css" rel="stylesheet" />
+    <link rel="icon" href="images/play.png">
+
+</head>
+
+<body onload='loadDetail()'>
+    <!--Don't forget to add your bootstrap library-->
+    <div class="container-fluid">
+        <!--HEADER-->
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top"></nav>
+        <!--END HEADER-->
+        <div id="content">
+            <div class="row justify-content-md-center" id="rowDetailHeader">
+                <div class="col-md-1"></div>
+                <div class="col-md-2" style="display:grid;justify-content: center;">
+                    <p id="detailReleaseDate" style="text-align: center;">Release Date : 2019-10-31</p>
+                    <img style="margin:auto" id="detailMoviePoster" src="./images/movieGenerique.png" />
+                    <h5>Trailers : </h4>
+                        <button id="btnYoutube" onclick="videoSearch()" data-toggle="modal" data-target=".carousel"
+                            style="margin-top:1rem" class="btn btn-outline-dark"> <i class="fab fa-youtube fa-2x"
+                                style="vertical-align: middle;color : red"></i>&nbsp;&nbsp;/<img
+                                src="./images/dailymotionIcon.png" style="width: 120px;height: 40px;" /></button>
+                </div>
+                <div class="col-md-7">
+                    <h1 id="detailTitle">title</h1>
+                    <p id="detailRating"></p>
+                    <div id="Categorie">
+                        <h4 style="display : inline-block">Category: </h4>
+                        <p style="display : inline-block" id="detailCategorie"></p>
+                    </div>
+                    <div style="display : inline-block">
+                        <h4> Buy now : </h4>
+                        <button id="btnEbay" class="btn btn-primary"><i class="fab fa-ebay fa-2x"
+                                style="vertical-align: top;"></i></button>
+                    </div>
+                    <div id="resumeDiv" style="margin-top:1rem">
+                        <h2>Resume</h2>
+                        <p id="detailResume"></p>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+
+            <div class="row justify-content-md-center" id="rowDetailMore" style="margin-top: 1rem;margin-bottom: 1rem;">
+                <div class="col-md-1"></div>
+                <div class="col-md-10" style="display: inline-block;justify-content: center;">
+                    <h2>Casting</h2>
+                    <div id="detailCast" class="row" style="display: flex;justify-content: center;"></div>
+                </div>
+                <div class="col-md-1"></div>
+
+            </div>
+
+            <div class="row justify-content-md-center" id="rowDetailMore" style="margin-top:2rem">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <h2>Production Team</h2>
+                    <p id="detailCrew"></p>
+                </div>
+                <div class="col-md-5">
+                    <h2>Production Studio</h2>
+                    <p id="Production_comp"></p>
+                </div>
+                <div class="col-md-1"></div>
+
+            </div>
+        </div>
+        <div class="modal fade carousel slide row" id="lightbox" data-ride="carousel">
+            <div class="col-md-2"></div>
+            <div class="modal-dialog video col-md-8">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <ol class="carousel-indicators">
+                            <li data-target="#lightbox" data-slide-to="0" class="active"></li>
+                            <li data-target="#lightbox" data-slide-to="1"></li>
+                            <li data-target="#lightbox" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img id="toRep" src="videoGenerique.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="toRep" src="videoGenerique.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img id="toReplace" src="videoGenerique.jpg" alt="Third slide">
+                            </div>
+                        </div><!-- /.carousel-inner -->
+                        <a class="left carousel-control-prev" href="#lightbox" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Prev</span>
+                        </a>
+                        <a class="right carousel-control-next" href="#lightbox" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div><!-- /.modal-body -->
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+            <div class="col-md-2"></div>
+        </div><!-- /.modal -->
+    </div>
+    </div>
+
+
+    <!--FOOTER-->
+    <footer id="footer"></footer>
+    <!--END FOOTER-->
+    <script type="text/javascript" src="js/moviegen.js"></script>
+    <script type="text/javascript" src="js/youtubeScript.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+        $('btnCast').parent().click(function () {
+            if (document.querySelector('#btnCast').classList.contains('collapsed')) {
+                document.getElementById("btnCast").innerText = "affichez le reste de la Distribution"
+            }
+            else {
+                document.getElementById("btnCast").innerText = "Cachez le reste de la Distribution"
+            }
+        }); 
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d8e01e74af.js"></script>
+</body>
+
+</html>

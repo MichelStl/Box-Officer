@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Box-Officer - About</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gestionnaire de films movieGEN">
+    <!--Page description-->
+    <meta name="keywords"
+        content="Film, Meilleurs Films, Gestionnaire de Films, Omdb, Youtube, eBay, movieGEN, moviegen">
+    <!--Page reference keywords-->
+    <meta name="author" content="Michel St-Laurent, Jean-Félix St-Hilaire">
+    <!--Page author name-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="css/stylesheet.css" rel="stylesheet" />
+    <link rel="icon" href="images/play.png">
+</head>
+
+<body onload='LoadBody()'>
+    <!--Don't forget to add your bootstrap library-->
+    <div class="container-fluid">
+        <!--HEADER-->
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top"></nav>
+        <!--END HEADER-->
+        <div id="content">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2 align-self-center">
+                    <a href="https://www.themoviedb.org/" rel="noopener noreferrer" target="_blank"><img class="apiImages" src="./images/themoviedb.png" alt="themoviedb logo"></a>
+                </div>
+                <div class="col-md-6">
+                        <h2 class="apiName">The movie DB</h2>
+                        <a class="docLink" href="https://developers.themoviedb.org/3/getting-started/introduction" rel="noopener noreferrer" target="_blank">api documentation</a>
+                        <p>The movie db api provide films and television series data sets. 
+                            We use it to display up to date information on poster image, release date, film description, rating, and actors, which we get them in JSON format. 
+                            Moreover, the API supply XML format too and require an API key to access data.
+                            The api data set contains a huge amount of specific data on tv content. 
+                        </p>
+                        <br/>
+                        <h3>The movie db is used in app pages:</h3>
+                        <ul class="list">
+                            <li><a href="./index.html">index.html</a></li>
+                            <li>detail.html</li>
+                        </ul>
+                        <a  href="file:./js\themovieDB.js" rel="noopener noreferrer" target="_blank">Find the code using the API here</a>
+                        <p class="owner">Themoviedb.org is operated by TiVo Platform Technologies</p>
+                    <hr class="separ"/>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-6">
+                        <h2 class="apiName">ebay</h2>
+                        <a class="docLink" href="https://developer.ebay.com/docs" rel="noopener noreferrer" target="_blank">api documentation</a>
+                        <p>ebay is one of the most known auction site in the world. With a large selection of sellers and products, we use ebay to 
+                            find the best deals for our movies cutomers.
+                        </p>
+                        <br/>
+                        <h3>ebay is used in app page:</h3>
+                        <ul class="list">
+                            <li>detail.html</li>
+                        </ul>
+                        <a  href="file:./js\ebayScript.js" rel="noopener noreferrer" target="_blank">Find the code using the API here</a>
+                        <p class="owner">The top 3 ebay's shareholders are Pierre Omidyar John Donahoe and Devin Wenig</p>
+                    <hr class="separ"/>
+                </div>
+                <div class="col-md-2 align-self-center">
+                        <a href="https://www.ebay.com/" rel="noopener noreferrer" target="_blank"><img class="apiImages" src="./images/ebay.png" alt="ebay logo"></a>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2 align-self-center">
+                    <a href="https://www.youtube.com/" rel="noopener noreferrer" target="_blank"><img class="apiImagesyou" src="./images/youtube_logo.gif" alt="Youtube logo"></a>
+                </div>
+                <div class="col-md-6">
+                        <h2 class="apiName">Youtube</h2>
+                        <a class="docLink" href="https://developers.google.com/youtube" rel="noopener noreferrer" target="_blank">api documentation</a>
+                        <p>Youtube is a worldwide class of personal and commercial streaming platform. 
+                            Everybody logged in may create a channel, share online videos and at some point being paid from views and like (these are known as youtuber).
+                            We use Youtube as a film and series trailer provider on the detail page. The API supply JSON and XML data set format and require an authentication key.
+                        </p>
+                        <br/>
+                        <h3>Youtube is used in app page:</h3>
+                        <ul class="list">
+                            <li>detail.html</li>
+                        </ul>
+                        <a  href="file:./js\youtubeScript.js" rel="noopener noreferrer" target="_blank">Find the code using the API here</a>
+                        <p class="owner">YouTube now operates as one of Google's subsidiaries</p>
+                    <hr class="separ"/>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-6">
+                        <h2 class="apiName">Dailymotion</h2>
+                        <a class="docLink" href="https://developer.dailymotion.com/" rel="noopener noreferrer" target="_blank">api documentation</a>
+                        <p>Dalilymotion is a video sharing platform like youtube. We use it to find a wider range of movie trailers for our audience.
+                        </p>
+                        <br/>
+                        <h3>Dailymotion is used in app page:</h3>
+                        <ul class="list">
+                            <li>detail.html</li>
+                        </ul>
+                        <a  href="file:./js\youtubeScript.js" rel="noopener noreferrer" target="_blank">Find the code using the API here</a>
+                        <p class="owner">Dailymotion is owned by Vivendi and had his headquaters in Paris</p>
+                    <hr class="separ"/>
+                </div>
+                <div class="col-md-2 align-self-center">
+                    <a href="https://www.dailymotion.com/ca" rel="noopener noreferrer" target="_blank"><img class="apiImages" src="./images/dailymotion.png" alt="Dailymotion logo"></a>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2 align-self-center">
+                    <a href="https://www.wikipedia.org/" rel="noopener noreferrer" target="_blank"><img class="apiImages" src="./images/wikipedia.png" alt="Wikipedia logo"></a>
+                </div>
+                <div class="col-md-6">
+                        <h2 class="apiName">Wikipedia</h2>
+                        <a class="docLink" href="https://www.mediawiki.org/wiki/API:Main_page" rel="noopener noreferrer" target="_blank">api documentation</a>
+                        <p>Wikipedia is a multilangual and collective encyclopedia based on Creative Commons BY-SA licence. All Wikipedia content is free and articles writters are voulunteers.
+                            We use Wikipedia to provide actors description on mouse hover on their name in the film details page.
+                        </p>
+                        <br/>
+                        <h3>Wikipedia is used in app page:</h3>
+                        <ul class="list">
+                            <li>detail.html</li>
+                        </ul>
+                        <a  href="file:./js\Wikipedia.js" rel="noopener noreferrer" target="_blank">Find the code using the API here</a>
+                        <p class="owner">Wikipedia's owner is Wikimedia Foundation, a non benefit organization</p>
+                    <hr class="separ"/>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-6">
+                        <h2 class="apiName">OpenWheather</h2>
+                        <a class="docLink" href="https://openweathermap.org/api" rel="noopener noreferrer" target="_blank">api documentation</a>
+                        <p>OpenWeather is an online weather data and forecast provider, it utilize meteo broadcast services 
+                            raw data from airport weather stations, 
+                            raw data from radar stations, and raw data from other official weather stations. OpenWeather provide JSON, XML and HTML endpoints. 
+                            We use these data to help our customers
+                            chose the best cinema experience they can get, like staying home, going to theater, or drive-in theater.</p>
+                        <br/>
+                        <h3>OpenWheather is used in app pages:</h3>
+                        <ul class="list">
+                            <li>header of every pages.</li>
+                        </ul>
+                        <a  href="file:./js\openweather.js" rel="noopener noreferrer" target="_blank">Find the code using the API here</a>
+                        <p class="owner">OpenWeather is owned by OpenWeather.Ltd.</p>
+                    <hr class="separ"/>
+                </div>
+                <div class="col-md-2 align-self-center">
+                    <a href="https://openweathermap.org/" rel="noopener noreferrer" target="_blank"><img class="apiImagesyou" src="./images/openweather.png" alt="OpenWeather logo"></a>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2 align-self-center">
+                        <a href="./index.html" rel="noopener noreferrer" target="_blank"><img class="apiImages" src="./images/play.png" alt="App logo"></a>
+                    </div>
+                <div class="col-md-6">
+                        <h2 class="apiName">Box-Officer</h2>
+                        <a class="docLink" href="./about.html" rel="noopener noreferrer" target="_blank">App documentation</a>
+                        <p>Box-Officer is an app made by Jean-Félix St-Hilaire and Michel St-Laurent in a API learning purpose. The app concept is to provide a maximum 
+                            informations from the movie industry. We show a bunch of info on movies, Trailers, actors, best deals and much more... 
+                        </p>
+                        <br/>
+                        <h3>App pages:</h3>
+                        <ul class="list">
+                            <li>index.html</li>
+                            <li>detail.html</li>
+                            <li>about.html</li>
+                        </ul>
+                        <p class="owner">Box-Officer is operated by Jean-Félix and Michel</p>
+                    <hr class="separ"/>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+    <!--FOOTER-->
+    <footer id="footer"></footer>
+    <!--END FOOTER-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d8e01e74af.js"></script>
+    <script type="text/javascript" src="js/moviegen.js"></script>
+    <script>
+    $(function(){
+        $("#filmSearch").children().attr('disabled', 'disabled');
+        $("#filmSearch").attr('style', 'visibility : hidden');
+    });
+    </script>
+</body>
+
+</html>
